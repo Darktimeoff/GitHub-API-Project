@@ -5,12 +5,12 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import { About } from './pages/About';
 import { Profile } from './pages/Profile';
 import { Alert } from './components/Alert';
-import { AlertState } from './context/alert/AlertState';
+import { Context } from './context/Context';
 
 
 function App() {
 	return (
-		<AlertState>
+		<Context>
 			<BrowserRouter>
 				<NavBar />
 				<div className="container pt-4">
@@ -22,7 +22,7 @@ function App() {
 					</Switch>
 				</div>
 			</BrowserRouter>
-		</AlertState>
+		</Context>
   );
 }
 
